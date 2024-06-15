@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Model Viewer AR - Dynamic GLB Model Placement</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #fff;
+        }
+        .model-viewer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+            height: 80%;
+        }
+        model-viewer {
+            width: 30%;
+            height: 30%;
+            margin: 1%;
+        }
+        .controls {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .ar-button, .file-selector, .quantity-input {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .ar-button {
+            color: #fff;
+            background: #007BFF;
+        }
+        .ar-button:active {
+            background: #0056b3;
+        }
+        .home-link {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: rgb(28, 111, 53);
+            text-decoration: none;
+            font-size: 18px;
+        }
+    </style>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+</head>
+<body>
+    <a class="home-link" href="http://127.0.0.1:5500/newcoder/star/index.html">HOME</a>
+
+    <div class="controls">
+        <select class="file-selector" id="fileSelector">
+            <option value="./assets/starbucks_grande_coffee_cup_caution_hot.glb">Starbucks Coffee Cup</option>
+            <option value="./assets/starbucks_frappuccino_cupcake__no_caramel.glb">Another Model</option>
+            <option value="./assets/chocolate_starbucks_muffin.glb">Yet Another Model</option>
+        </select>
+        <input class="quantity-input" type="number" id="quantityInput" placeholder="Enter quantity" min="1">
+        <button class="ar-button" id="arButton">View in AR</button>
+    </div>
+
+    <div class="model-viewer-container" id="modelViewerContainer">
+        <!-- Model viewers will be added here -->
+    </div>
+
+    <script>
+        const modelViewerContainer = document.getElementById('modelViewerContainer');
+        const arButton = document.getElementById('arButton');
+        const fileSelector = document.getElementById('fileSelector');
+        const quantityInput = document.getElementById('quantityInput');
+
+        function createModelViewer(src) {
+            const modelViewer = document.createElement('model-viewer');
+            modelViewer.setAttribute('src', src);
+            modelViewer.setAttribute('alt', 'A 3D model');
+            modelViewer.setAttribute('auto-rotate', '');
+            modelViewer.setAttribute('camera-controls', '');
+            modelViewer.setAttribute('ar', '');
+            modelViewer.setAttribute('ar-modes', 'scene-viewer webxr quick-look');
+            modelViewer.setAttribute('ar-scale', 'auto');
+            modelViewer.setAttribute('autoplay', '');
+            modelViewer.setAttribute('style', '--poster-color: transparent;');
+            return modelViewer;
+        }
+
+        arButton.addEventListener('click', () => {
+            const quantity = parseInt(quantityInput.value) || 1;
+            const selectedFile = fileSelector.value;
+            modelViewerContainer.innerHTML = '';
+            for (let i = 0; i < quantity; i++) {
+                const modelViewer = createModelViewer(selectedFile);
+                modelViewerContainer.appendChild(modelViewer);
+            }
+        });
+
+        modelViewerContainer.addEventListener('ar-status', (event) => {
+            if (event.detail.status === 'session-started') {
+                const minPosition = { x: 0, y: -4, z: 3 }; // Your desired minimum position
+                const scale = 1; // Your desired scale
+
+                modelViewerContainer.querySelectorAll('model-viewer').forEach(modelViewer => {
+                    modelViewer.setAttribute('scale', `${scale} ${scale} ${scale}`);
+                    modelViewer.setAttribute('position', `${minPosition.x} ${minPosition.y} ${minPosition.z}`);
+                });
+            }
+        });
+    </script>
+</body>
+</html>

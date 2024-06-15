@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Model Viewer AR - GLB Model Placement</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #fff;
+        }
+        model-viewer {
+            width: 100%;
+            height: 100%;
+        }
+        .home-link, .ar-button {
+            position: absolute;
+            left: 20px;
+            font-size: 16px;
+            color: #1C6F35;
+            text-decoration: none;
+            background: #fff;
+            padding: 10px 20px;
+            border: 2px solid #1C6F35;
+            border-radius: 5px;
+            z-index: 10;
+        }
+        .home-link {
+            top: 20px;
+        }
+        .home-link:hover {
+            background: #1C6F35;
+            color: #fff;
+        }
+        .ar-button {
+            top: 80px; /* Adjusted to place it below the HOME button */
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .ar-button:hover {
+            background: #1C6F35;
+            color: #fff;
+        }
+    </style>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+</head>
+<body>
+
+    <a
+        id="homeLink"
+        class="home-link"
+        href="http://127.0.0.1:5500/newcoder/star/index.html"
+        >HOME</a>
+
+    <button class="ar-button" id="arButton">View in AR</button>
+
+    <model-viewer 
+        id="modelViewer"
+        src="./assets/starbucks_grande_coffee_cup_caution_hot.glb"  
+        alt="A 3D model of an animated character"
+        auto-rotate
+        camera-controls
+        ar
+        ar-modes="scene-viewer webxr quick-look"
+        ar-scale="auto"
+        autoplay
+        style="--poster-color: transparent;">
+    </model-viewer>
+
+    <script>
+        const modelViewer = document.getElementById('modelViewer');
+        const arButton = document.getElementById('arButton');
+
+        arButton.addEventListener('click', () => {
+            if (modelViewer.canActivateAR) {
+                modelViewer.activateAR();
+            } else {
+                alert("AR is not supported on this device.");
+            }
+        });
+
+        modelViewer.addEventListener('ar-status', (event) => {
+            if (event.detail.status === 'session-started') {
+                const minPosition = { x: 0, y: -4, z: 3 }; // Your desired minimum position
+                const scale = { x: 1, y: 1, z: 1 }; // Your desired scale
+
+                modelViewer.scale = scale;
+                modelViewer.position = minPosition;
+            }
+        });
+    </script>
+</body>
+</html>
