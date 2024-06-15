@@ -1,122 +1,437 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <title>Restaurant AR Menu</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
     <style>
-        body {
-            margin: 0;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background: #fff;
-            font-family: Arial, sans-serif;
-        }
-        model-viewer {
-            width: 100%;
-            height: 100%;
-        }
-        .ar-button {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            padding: 10px 20px;
-            font-size: 16px;
-            color: #fff;
-            background: #007BFF;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            z-index: 10;
-        }
-        .ar-button:active {
-            background: #0056b3;
-        }
-        .menu {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            display: flex;
-            flex-wrap: wrap;
-            max-width: calc(100% - 40px);
-            gap: 10px;
-            z-index: 10;
-        }
-        .menu-item {
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: transform 0.2s ease;
-        }
-        .menu-item:hover {
-            transform: scale(1.05);
-            background-color: #f0f0f0;
-        }
+      body {
+        margin: 0;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #fff;
+        font-family: Arial, sans-serif;
+      }
+      model-viewer {
+        width: 100%;
+        height: 100%;
+      }
+      .ar-button {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 10px 20px;
+        font-size: 16px;
+        color: #fff;
+        background: #007bff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        z-index: 10;
+      }
+      .ar-button:active {
+        background: #0056b3;
+      }
+      .menu {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        max-width: calc(100% - 40px);
+        gap: 10px;
+        z-index: 10;
+      }
+      .menu-item {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+      }
+      .menu-item:hover {
+        transform: scale(1.05);
+        background-color: #f0f0f0;
+      }
     </style>
-    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
-</head>
-<body>
-
+    <script
+      type="module"
+      src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"
+    ></script>
+  </head>
+  <body>
     <div class="menu">
-        <div class="menu-item" onclick="loadModel('./assets/coffee.glb')">Coffee</div>
-        <div class="menu-item" onclick="loadModel('./assets/burger.glb')">Burger</div>
-        <div class="menu-item" onclick="loadModel('./assets/pizza.glb')">Pizza</div>
-        <div class="menu-item" onclick="loadModel('./assets/salad.glb')">Salad</div>
-        <div class="menu-item" onclick="loadModel('./assets/pasta.glb')">Pasta</div>
-        <div class="menu-item" onclick="loadModel('./assets/ice-cream.glb')">Ice Cream</div>
-        <div class="menu-item" onclick="loadModel('./assets/sushi.glb')">Sushi</div>
-        <div class="menu-item" onclick="loadModel('./assets/steak.glb')">Steak</div>
-        <div class="menu-item" onclick="loadModel('./assets/smoothie.glb')">Smoothie</div>
-        <div class="menu-item" onclick="loadModel('./assets/cake.glb')">Cake</div>
+      <div
+        class="menu-item"
+        onclick="loadModel('https://raw.githubusercontent.com/Arul11111990/newcoder/2010dd3b567a04639c6111d0c1291cec3ecbba75/assets/4-TC-RAL-3001.glb')"
+      >
+        Coffee
+      </div>
+      <div
+        class="menu-item"
+        onclick="loadModel('https://raw.githubusercontent.com/Arul11111990/newcoder/2010dd3b567a04639c6111d0c1291cec3ecbba75/assets/4-TC-RAL-3001.glb')"
+      >
+        Burger
+      </div>
+      <div class="menu-item" onclick="loadModel('./assets/pizza.glb')">
+        Pizza
+      </div>
+      <div class="menu-item" onclick="loadModel('./assets/salad.glb')">
+        Salad
+      </div>
+      <div class="menu-item" onclick="loadModel('./assets/pasta.glb')">
+        Pasta
+      </div>
+      <div class="menu-item" onclick="loadModel('./assets/ice-cream.glb')">
+        Ice Cream
+      </div>
+      <div class="menu-item" onclick="loadModel('./assets/sushi.glb')">
+        Sushi
+      </div>
+      <div class="menu-item" onclick="loadModel('./assets/steak.glb')">
+        Steak
+      </div>
+      <div class="menu-item" onclick="loadModel('./assets/smoothie.glb')">
+        Smoothie
+      </div>
+      <div class="menu-item" onclick="loadModel('./assets/cake.glb')">Cake</div>
     </div>
 
-    <model-viewer 
-        id="modelViewer"
-        alt="A 3D model of a menu item"
-        camera-controls
-        ar
-        ar-modes="webxr scene-viewer quick-look"
-        ar-scale="auto"
-        autoplay
-        style="--poster-color: transparent;">
+    <model-viewer
+      id="modelViewer"
+      alt="A 3D model of a menu item"
+      camera-controls
+      ar
+      ar-modes="webxr scene-viewer quick-look"
+      ar-scale="auto"
+      autoplay
+      style="--poster-color: transparent"
+    >
     </model-viewer>
 
     <button class="ar-button" id="arButton">View in AR</button>
 
     <script>
-        const modelViewer = document.getElementById('modelViewer');
-        const arButton = document.getElementById('arButton');
+      const modelViewer = document.getElementById("modelViewer");
+      const arButton = document.getElementById("arButton");
 
-        // Function to load a model into the model viewer
-        function loadModel(src) {
-            modelViewer.src = src;
+      // Function to load a model into the model viewer
+      function loadModel(src) {
+        modelViewer.src = src;
+      }
+
+      // AR button click event listener
+      arButton.addEventListener("click", () => {
+        if (modelViewer.canActivateAR) {
+          modelViewer.activateAR();
+        } else {
+          alert("AR is not supported on this device.");
         }
+      });
 
-        // AR button click event listener
-        arButton.addEventListener('click', () => {
-            if (modelViewer.canActivateAR) {
-                modelViewer.activateAR();
-            } else {
-                alert("AR is not supported on this device.");
-            }
-        });
+      // Event listener for AR session start
+      modelViewer.addEventListener("ar-status", (event) => {
+        if (event.detail.status === "session-started") {
+          // Example: Set minimum position and scale in AR session
+          const minPosition = { x: 0, y: -4, z: 3 };
+          const scale = { x: 1, y: 1, z: 1 };
 
-        // Event listener for AR session start
-        modelViewer.addEventListener('ar-status', (event) => {
-            if (event.detail.status === 'session-started') {
-                // Example: Set minimum position and scale in AR session
-                const minPosition = { x: 0, y: -4, z: 3 };
-                const scale = { x: 1, y: 1, z: 1 };
-
-                modelViewer.scale = scale;
-                modelViewer.position = minPosition;
-            }
-        });
+          modelViewer.scale = scale;
+          modelViewer.position = minPosition;
+        }
+      });
     </script>
-</body>
+  </body>
 </html>
+
+<fieldset class="js product-form__input product-form__input--swatch">
+  <legend class="form__label">
+    Color:
+    <span data-selected-swatch-value="Color">Orange (RAL 2009)</span>
+  </legend>
+
+  <input
+    type="radio"
+    id="template--17234212389076__main-1-0"
+    name="Color"
+    value="Dark Gray (RAL 7024)"
+    color="#464b51"
+    form="product-form-template--17234212389076__main"
+    class="swatch-input__input"
+    checked=""
+  />
+  <label
+    for="template--17234212389076__main-1-0"
+    title="Dark Gray (RAL 7024)"
+    class="swatch-input__label"
+  >
+    <span class="swatch" style="--swatch--background: #464b51"></span>
+
+    <span class="visually-hidden">Dark Gray (RAL 7024)</span>
+
+    <span class="visually-hidden label-unavailable"
+      >Variant sold out or unavailable</span
+    >
+  </label>
+
+  <input
+    type="radio"
+    id="template--17234212389076__main-1-1"
+    name="Color"
+    value="Beige (RAL 1019)"
+    color="#a48f7a"
+    form="product-form-template--17234212389076__main"
+    class="swatch-input__input"
+  />
+  <label
+    for="template--17234212389076__main-1-1"
+    title="Beige (RAL 1019)"
+    class="swatch-input__label"
+  >
+    <span class="swatch" style="--swatch--background: #a48f7a"></span>
+
+    <span class="visually-hidden">Beige (RAL 1019)</span>
+
+    <span class="visually-hidden label-unavailable"
+      >Variant sold out or unavailable</span
+    >
+  </label>
+
+  <input
+    type="radio"
+    id="template--17234212389076__main-1-2"
+    name="Color"
+    value="Yellow (RAL 1021)"
+    color="#f6b600"
+    form="product-form-template--17234212389076__main"
+    class="swatch-input__input"
+  />
+  <label
+    for="template--17234212389076__main-1-2"
+    title="Yellow (RAL 1021)"
+    class="swatch-input__label"
+  >
+    <span class="swatch" style="--swatch--background: #f6b600"></span>
+
+    <span class="visually-hidden">Yellow (RAL 1021)</span>
+
+    <span class="visually-hidden label-unavailable"
+      >Variant sold out or unavailable</span
+    >
+  </label>
+
+  <input
+    type="radio"
+    id="template--17234212389076__main-1-3"
+    name="Color"
+    value="Orange (RAL 2009)"
+    color="#de5307"
+    form="product-form-template--17234212389076__main"
+    class="swatch-input__input"
+    data-gtm-form-interact-field-id="2"
+  />
+  <label
+    for="template--17234212389076__main-1-3"
+    title="Orange (RAL 2009)"
+    class="swatch-input__label"
+  >
+    <span class="swatch" style="--swatch--background: #de5307"></span>
+
+    <span class="visually-hidden">Orange (RAL 2009)</span>
+
+    <span class="visually-hidden label-unavailable"
+      >Variant sold out or unavailable</span
+    >
+  </label>
+
+  <input
+    type="radio"
+    id="template--17234212389076__main-1-4"
+    name="Color"
+    value="Red (RAL 3001)"
+    color="#94121a"
+    form="product-form-template--17234212389076__main"
+    class="swatch-input__input"
+  />
+  <label
+    for="template--17234212389076__main-1-4"
+    title="Red (RAL 3001)"
+    class="swatch-input__label"
+  >
+    <span class="swatch" style="--swatch--background: #94121a"></span>
+
+    <span class="visually-hidden">Red (RAL 3001)</span>
+
+    <span class="visually-hidden label-unavailable"
+      >Variant sold out or unavailable</span
+    >
+  </label>
+
+  <input
+    type="radio"
+    id="template--17234212389076__main-1-5"
+    name="Color"
+    value="Blue (RAL 5001)"
+    color="#0f4c64"
+    form="product-form-template--17234212389076__main"
+    class="swatch-input__input"
+  />
+  <label
+    for="template--17234212389076__main-1-5"
+    title="Blue (RAL 5001)"
+    class="swatch-input__label"
+  >
+    <span class="swatch" style="--swatch--background: #0f4c64"></span>
+
+    <span class="visually-hidden">Blue (RAL 5001)</span>
+
+    <span class="visually-hidden label-unavailable"
+      >Variant sold out or unavailable</span
+    >
+  </label>
+
+  <input
+    type="radio"
+    id="template--17234212389076__main-1-6"
+    name="Color"
+    value="Light Blue (RAL 5012)"
+    color="#007cb0"
+    form="product-form-template--17234212389076__main"
+    class="swatch-input__input"
+  />
+  <label
+    for="template--17234212389076__main-1-6"
+    title="Light Blue (RAL 5012)"
+    class="swatch-input__label"
+  >
+    <span class="swatch" style="--swatch--background: #007cb0"></span>
+
+    <span class="visually-hidden">Light Blue (RAL 5012)</span>
+
+    <span class="visually-hidden label-unavailable"
+      >Variant sold out or unavailable</span
+    >
+  </label>
+
+  <input
+    type="radio"
+    id="template--17234212389076__main-1-7"
+    name="Color"
+    value="Teal (RAL 5021)"
+    color="#007577"
+    form="product-form-template--17234212389076__main"
+    class="swatch-input__input"
+  />
+  <label
+    for="template--17234212389076__main-1-7"
+    title="Teal (RAL 5021)"
+    class="swatch-input__label"
+  >
+    <span class="swatch" style="--swatch--background: #007577"></span>
+
+    <span class="visually-hidden">Teal (RAL 5021)</span>
+
+    <span class="visually-hidden label-unavailable"
+      >Variant sold out or unavailable</span
+    >
+  </label>
+
+  <input
+    type="radio"
+    id="template--17234212389076__main-1-8"
+    name="Color"
+    value="Dusty Gray (RAL 7037)"
+    color="#7a7b7a"
+    form="product-form-template--17234212389076__main"
+    class="swatch-input__input"
+  />
+  <label
+    for="template--17234212389076__main-1-8"
+    title="Dusty Gray (RAL 7037)"
+    class="swatch-input__label"
+  >
+    <span class="swatch" style="--swatch--background: #7a7b7a"></span>
+
+    <span class="visually-hidden">Dusty Gray (RAL 7037)</span>
+
+    <span class="visually-hidden label-unavailable"
+      >Variant sold out or unavailable</span
+    >
+  </label>
+
+  <input
+    type="radio"
+    id="template--17234212389076__main-1-9"
+    name="Color"
+    value="Brown (RAL 8008)"
+    color="#724a25"
+    form="product-form-template--17234212389076__main"
+    class="swatch-input__input"
+  />
+  <label
+    for="template--17234212389076__main-1-9"
+    title="Brown (RAL 8008)"
+    class="swatch-input__label"
+  >
+    <span class="swatch" style="--swatch--background: #724a25"></span>
+
+    <span class="visually-hidden">Brown (RAL 8008)</span>
+
+    <span class="visually-hidden label-unavailable"
+      >Variant sold out or unavailable</span
+    >
+  </label>
+
+  <input
+    type="radio"
+    id="template--17234212389076__main-1-10"
+    name="Color"
+    value="White (RAL 9003)"
+    color="#ececec"
+    form="product-form-template--17234212389076__main"
+    class="swatch-input__input"
+  />
+  <label
+    for="template--17234212389076__main-1-10"
+    title="White (RAL 9003)"
+    class="swatch-input__label"
+  >
+    <span class="swatch" style="--swatch--background: #ececec"></span>
+
+    <span class="visually-hidden">White (RAL 9003)</span>
+
+    <span class="visually-hidden label-unavailable"
+      >Variant sold out or unavailable</span
+    >
+  </label>
+
+  <input
+    type="radio"
+    id="template--17234212389076__main-1-11"
+    name="Color"
+    value="Black (RAL 9005)"
+    color="#232323"
+    form="product-form-template--17234212389076__main"
+    class="swatch-input__input"
+  />
+  <label
+    for="template--17234212389076__main-1-11"
+    title="Black (RAL 9005)"
+    class="swatch-input__label"
+  >
+    <span class="swatch" style="--swatch--background: #232323"></span>
+
+    <span class="visually-hidden">Black (RAL 9005)</span>
+
+    <span class="visually-hidden label-unavailable"
+      >Variant sold out or unavailable</span
+    >
+  </label>
+</fieldset>

@@ -63,9 +63,9 @@
 <body>
 
     <div class="menu">
-        <div class="menu-item" onclick="loadModel('./assets/glb/starbucks_grande_coffee_cup_caution_hot.glb')">Coffee</div>
-        <div class="menu-item" onclick="loadModel('./assets/glb/starbucks_frappuccino_cupcake__no_caramel.glb')">Burger</div>
-        <div class="menu-item" onclick="loadModel('./assets/glb/chocolate_starbucks_muffin.glb')">Pizza</div>
+        <div class="menu-item" onclick="toggleSelection(this, './assets/glb/starbucks_grande_coffee_cup_caution_hot.glb')">Coffee</div>
+        <div class="menu-item" onclick="toggleSelection(this, './assets/glb/starbucks_frappuccino_cupcake__no_caramel.glb')">Burger</div>
+        <div class="menu-item" onclick="toggleSelection(this, './assets/glb/chocolate_starbucks_muffin.glb')">Pizza</div>
         <!-- Add more menu items as needed -->
     </div>
 
@@ -86,12 +86,12 @@
         const modelViewer = document.getElementById('modelViewer');
         const arButton = document.getElementById('arButton');
         const selectedItems = new Set(); // Set to store selected items
-
+/* 
         // Function to load model into model viewer
         function loadModel(src) {
             modelViewer.src = src;
         }
-
+ */
         // Function to toggle selection of menu items
         function toggleSelection(element, src) {
             if (selectedItems.has(src)) {
@@ -100,6 +100,45 @@
             } else {
                 selectedItems.add(src);
                 element.classList.add('selected');
+            }
+            updateModelViewer();
+        }
+
+        // Function to update model viewer with selected items
+        function updateModelViewer() {
+            if (selectedItems.size === 0) {
+                return; // No items selected
+            }
+
+            // Load the first selected item
+            const firstItem = selectedItems.values().next().value;
+            modelViewer.src = firstItem;
+
+            // Iterate through remaining selected items to adjust position and scale
+            let index = 0;
+            selectedItems.forEach(src => {
+                if (index === 0) {
+                    index++; // Skip the first item (already loaded)
+                    return;
+                }
+                const newPosition = { x: index * 1.5, y: 0, z: index * 1.5 }; // Adjust position based on index
+                const newScale = { x: 0.5, y: 0.5, z: 0.5 }; // Example scale adjustment
+
+                // Set position and scale for each model
+                modelViewer.addModel({
+                    src: src,
+                    scale: newScale,
+                    position: newPosition
+                });
+
+                index++;
+            });
+
+            // Activate AR if supported
+            if (modelViewer.canActivateAR) {
+                modelViewer.activateAR();
+            } else {
+                alert("AR is not supported on this device.");
             }
         }
 
@@ -113,11 +152,7 @@
                 alert("Please select at least one item.");
                 return;
             }
-            // Load all selected items into AR viewer
-            selectedItems.forEach(src => {
-                modelViewer.src = src;
-                modelViewer.activateAR();
-            });
+            updateModelViewer();
         });
 
         // Event listener for AR session start
