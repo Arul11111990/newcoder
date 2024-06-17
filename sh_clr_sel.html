@@ -22,6 +22,25 @@
         width: 100%;
         height: 100%;
       }
+      .home-link, .ar-button {
+            position: absolute;
+            left: 20px;
+            font-size: 16px;
+            color: #1C6F35;
+            text-decoration: none;
+            background: #fff;
+            padding: 10px 20px;
+            border: 5px solid #1C6F35;
+            border-radius: 15px;
+            z-index: 10;
+        }
+        .home-link {
+            top: 150px;
+        }
+        .home-link:hover {
+            background: #1C6F35;
+            color: #fff;
+        }
       .ar-button {
         position: absolute;
         bottom: 20px;
@@ -75,7 +94,7 @@
         border: 0;
       }
     </style>
-    //Qr code
+<!--  qr code -->
     <script>
         function showQRCode() {
             document.getElementById("popup").style.display = "block";
@@ -98,7 +117,7 @@
     <script src=
     "https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js">
         </script>
-        //Qr end
+     <!--  qr end -->
     <script
       type="module"
       src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"
@@ -107,9 +126,9 @@
   <body>
     <div>
         <a
-          id="homeLink"
-          style="color: hwb(216 5% 7% / 0.486)"
-          href="http://127.0.0.1:5500/myfirstproject/SH_AR/index.html"
+        id="homeLink"
+        class="home-link"
+          href="https://raw.githubusercontent.com/Arul11111990/newcoder/e59764229314bf4a8fdd952279a1585a5ee091ba/strong_h/index.html"
           >HOME</a>
       </div>
 
@@ -207,7 +226,7 @@
     </model-viewer>
 
    <!--  <button class="ar-button" id="arButton">View in AR</button> -->
-//qr code
+<!-- qr code -->
     <div class="container">
         <button id="clickToViewText" class="ar-button" onclick="showQRCode()"> Click Here To View In AR </button>
 </div>
@@ -219,7 +238,7 @@
     </div>
 </div>
 
-//qr code end
+<!-- qr code end -->
     <script>
       const modelViewer = document.getElementById("modelViewer");
       const arButton = document.getElementById("arButton");
@@ -229,26 +248,7 @@
         modelViewer.src = src;
       }
 
-      // AR button click event listener
-      arButton.addEventListener("click", () => {
-        if (modelViewer.canActivateAR) {
-          modelViewer.activateAR();
-        } else {
-          alert("AR is not supported on this device.");
-        }
-      });
 
-      // Event listener for AR session start
-      modelViewer.addEventListener("ar-status", (event) => {
-        if (event.detail.status === "session-started") {
-          // Example: Set minimum position and scale in AR session
-          const minPosition = { x: 0, y: -4, z: 3 };
-          const scale = { x: 1, y: 1, z: 1 };
-
-          modelViewer.scale = scale;
-          modelViewer.position = minPosition;
-        }
-      });
     </script>
   </body>
 </html>
