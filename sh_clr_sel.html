@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Restaurant AR Menu</title>
+    <title>Extreme Duty 12 GA Mobile Tool Cart with 7 GA Steel Top, 6 Half-Width – Strong Hold</title>
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -42,21 +42,14 @@
             color: #fff;
         }
       .ar-button {
-        position: absolute;
-        bottom: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        padding: 10px 20px;
-        font-size: 16px;
+        top: 230px;
+        background: #1C6F35;
         color: #fff;
-        background: #007bff;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        z-index: 10;
+        border: 5px solid #1C6F35;
       }
-      .ar-button:active {
-        background: #0056b3;
+      .ar-button:hover {
+        background: #fff;
+        color: #1C6F35;
       }
       .menu {
         position: absolute;
@@ -93,18 +86,36 @@
         clip: rect(0, 0, 0, 0);
         border: 0;
       }
+      .popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #fff;
+        padding: 20px;
+        border: 5px solid #1C6F35;
+        border-radius: 15px;
+        z-index: 20;
+      }
+      .popup-content {
+        position: relative;
+        text-align: center;
+      }
+      .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        font-size: 20px;
+      }
     </style>
-<!--  qr code -->
     <script>
         function showQRCode() {
             document.getElementById("popup").style.display = "block";
-            
-            // Clear any existing QR code
             document.getElementById("qrcode").innerHTML = "";
-            
-            // Generate a new QR code
             new QRCode(document.getElementById("qrcode"), {
-                text: "https://arul11111990.github.io/newcoder/sh_clr_sel_ar.html", // The URL or text you want to encode in the QR code
+                text: "https://arul11111990.github.io/newcoder/sh_clr_sel_ar.html",
                 width: 200,
                 height: 200
             });
@@ -114,10 +125,7 @@
             document.getElementById("popup").style.display = "none";
         }
     </script>
-    <script src=
-    "https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js">
-        </script>
-     <!--  qr end -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <script
       type="module"
       src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"
@@ -125,13 +133,13 @@
   </head>
   <body>
     <div>
-        <a
+      <a
         id="homeLink"
         class="home-link"
-          href="https://arul11111990.github.io/newcoder/strong_h/index.html"
-          >HOME</a>
-      </div>
-
+        href="https://arul11111990.github.io/newcoder/strong_h/index.html"
+      >HOME</a>
+      <button id="clickToViewText" class="ar-button" onclick="showQRCode()"> Click Here To View In AR </button>
+    </div>
     <div class="menu">
       <fieldset class="js product-form__input product-form__input--swatch">
         <legend class="form__label">
@@ -225,30 +233,19 @@
     >
     </model-viewer>
 
-   <!--  <button class="ar-button" id="arButton">View in AR</button> -->
-<!-- qr code -->
-    <div class="container">
-        <button id="clickToViewText" class="ar-button" onclick="showQRCode()"> Click Here To View In AR </button>
-</div>
-
-<div id="popup" class="popup">
-    <div class="popup-content">
-        <span class="close-btn" onclick="hideQRCode()">&times;</span>
-        <div id="qrcode"></div>
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="hideQRCode()">&times;</span>
+            <div id="qrcode"></div>
+        </div>
     </div>
-</div>
 
-<!-- qr code end -->
     <script>
       const modelViewer = document.getElementById("modelViewer");
-      const arButton = document.getElementById("arButton");
 
-      // Function to load a model into the model viewer
       function loadModel(src) {
         modelViewer.src = src;
       }
-
-
     </script>
   </body>
 </html>
