@@ -799,6 +799,9 @@ for (var attr in meta) {
     });
   }
 })();</script>
+
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
 </head>
 
   <body class="gradient animate--hover-default">
@@ -2924,9 +2927,18 @@ for (var attr in meta) {
     <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
   </svg>
 </div>
-<div class="product__media media media--transparent">
-      <img src="//shop.strong-hold.com/cdn/shop/files/4-TC-240-6.5DB-RAL7024_front-open_dark-gray.jpg?v=1706637412&amp;width=1946" alt="" srcset="//shop.strong-hold.com/cdn/shop/files/4-TC-240-6.5DB-RAL7024_front-open_dark-gray.jpg?v=1706637412&amp;width=246 246w, //shop.strong-hold.com/cdn/shop/files/4-TC-240-6.5DB-RAL7024_front-open_dark-gray.jpg?v=1706637412&amp;width=493 493w, //shop.strong-hold.com/cdn/shop/files/4-TC-240-6.5DB-RAL7024_front-open_dark-gray.jpg?v=1706637412&amp;width=600 600w, //shop.strong-hold.com/cdn/shop/files/4-TC-240-6.5DB-RAL7024_front-open_dark-gray.jpg?v=1706637412&amp;width=713 713w, //shop.strong-hold.com/cdn/shop/files/4-TC-240-6.5DB-RAL7024_front-open_dark-gray.jpg?v=1706637412&amp;width=823 823w, //shop.strong-hold.com/cdn/shop/files/4-TC-240-6.5DB-RAL7024_front-open_dark-gray.jpg?v=1706637412&amp;width=990 990w, //shop.strong-hold.com/cdn/shop/files/4-TC-240-6.5DB-RAL7024_front-open_dark-gray.jpg?v=1706637412&amp;width=1100 1100w, //shop.strong-hold.com/cdn/shop/files/4-TC-240-6.5DB-RAL7024_front-open_dark-gray.jpg?v=1706637412&amp;width=1206 1206w, //shop.strong-hold.com/cdn/shop/files/4-TC-240-6.5DB-RAL7024_front-open_dark-gray.jpg?v=1706637412&amp;width=1346 1346w, //shop.strong-hold.com/cdn/shop/files/4-TC-240-6.5DB-RAL7024_front-open_dark-gray.jpg?v=1706637412&amp;width=1426 1426w, //shop.strong-hold.com/cdn/shop/files/4-TC-240-6.5DB-RAL7024_front-open_dark-gray.jpg?v=1706637412&amp;width=1646 1646w, //shop.strong-hold.com/cdn/shop/files/4-TC-240-6.5DB-RAL7024_front-open_dark-gray.jpg?v=1706637412&amp;width=1946 1946w" width="1946" height="1536" class="image-magnify-hover" sizes="(min-width: 1200px) 495px, (min-width: 990px) calc(45.0vw - 10rem), (min-width: 750px) calc((100vw - 11.5rem) / 2), calc(100vw / 1 - 4rem)">
-    </div>
+ 
+    <div class="product__media media media--transparent">
+      <model-viewer 
+      id="model-viewer" 
+      src="https://raw.githubusercontent.com/Arul11111990/newcoder/bdab4a809c55db460c2e9b23844133c8b5b75c00/assets/cart/4-TC-241-6.5DB_fo_RAL-Dark%20grey%207024.glb" 
+      alt="A 3D model of the product" 
+      auto-rotate 
+      camera-controls 
+      ar 
+      class="model-viewer">
+    </model-viewer>
+</div>
     <button class="product__media-toggle quick-add-hidden product__media-zoom-hover" type="button" aria-haspopup="dialog" data-media-id="32693793226964">
       <span class="visually-hidden">
         Open media 1 in modal
@@ -2974,6 +2986,7 @@ for (var attr in meta) {
     width: 100%;justify-content: center;align-items: center;
     border: 0;
     padding: 0 3rem;
+    position: relative;
     cursor: pointer;
     font: inherit;
     font-size: 1.6rem;
@@ -3052,423 +3065,209 @@ for (var attr in meta) {
 <li>6 in. heavy-duty casters allow for smooth mobility</li>
 <li>Ships fully assembled and ready for use from Louisville, Kentucky for use. 99-year warranty</li>
 </ul>
-                </div>
-<variant-selects
-    id="variant-selects-template--17234212389076__main"
-    class="no-js-hidden"
-    data-section="template--17234212389076__main"
-    data-url="/products/4-tc-241-6-5db"
-    
-    
-  ><fieldset class="js product-form__input product-form__input--swatch">
-          <legend class="form__label">
-            Color:
-            <span data-selected-swatch-value="Color">Dark Gray (RAL 7024)</span>
-          </legend>
-          
+  </div> 
+  <variant-selects
+      id="variant-selects-template--17234212389076__main"
+      class="no-js-hidden"
+      data-section="template--17234212389076__main"
+      data-url="/products/4-tc-241-6-5db"
+    >
+      <fieldset class="js product-form__input product-form__input--swatch">
+        <legend class="form__label">
+          Color:
+          <span data-selected-swatch-value="Color">Dark Gray (RAL 7024)</span>
+        </legend>
 
+        <input
+          type="radio"
+          id="template--17234212389076__main-1-0"
+          name="Color"
+          value="Dark Gray (RAL 7024)"
+          color="#464b51"
+          form="product-form-template--17234212389076__main"
+          class="swatch-input__input"
+          checked
+          onclick="loadModel('https://raw.githubusercontent.com/Arul11111990/newcoder/bdab4a809c55db460c2e9b23844133c8b5b75c00/assets/cart/4-TC-241-6.5DB_fo_RAL-Dark%20grey%207024.glb')"
+        >
+        <label for="template--17234212389076__main-1-0" title="Dark Gray (RAL 7024)" class="swatch-input__label">
+          <span class="swatch" style="--swatch--background: #464b51"></span>
+          <span class="visually-hidden">Dark Gray (RAL 7024)</span>
+          <span class="visually-hidden label-unavailable">Variant sold out or unavailable</span>
+        </label>
 
-    
-    
+        <input
+          type="radio"
+          id="template--17234212389076__main-1-1"
+          name="Color"
+          value="Beige (RAL 1019)"
+          color="#a48f7a"
+          form="product-form-template--17234212389076__main"
+          class="swatch-input__input"
+          onclick="loadModel('https://raw.githubusercontent.com/Arul11111990/newcoder/bdab4a809c55db460c2e9b23844133c8b5b75c00/assets/cart/4-TC-241-6.5DB_fo_RAL-Beige%201019.glb')"
+        >
+        <label for="template--17234212389076__main-1-1" title="Beige (RAL 1019)" class="swatch-input__label">
+          <span class="swatch" style="--swatch--background: #a48f7a"></span>
+          <span class="visually-hidden">Beige (RAL 1019)</span>
+          <span class="visually-hidden label-unavailable">Variant sold out or unavailable</span>
+        </label>
 
-<input
-  type="radio"
-  id="template--17234212389076__main-1-0"
-  name="Color"
-  value="Dark Gray (RAL 7024)"
-  color="#464b51"
-  form="product-form-template--17234212389076__main"
-  class="swatch-input__input"
-  
-    checked
-  
->
-<label
-  for="template--17234212389076__main-1-0"
-  title="Dark Gray (RAL 7024)"
-  class="swatch-input__label"
->
-  
-<span
-  
-    class="swatch "
-    style="--swatch--background: #464b51"
-  
-></span>
+        <input
+          type="radio"
+          id="template--17234212389076__main-1-2"
+          name="Color"
+          value="Yellow (RAL 1021)"
+          color="#f6b600"
+          form="product-form-template--17234212389076__main"
+          class="swatch-input__input"
+          onclick="loadModel('https://raw.githubusercontent.com/Arul11111990/newcoder/bdab4a809c55db460c2e9b23844133c8b5b75c00/assets/cart/4-TC-241-6.5DB_fo_RAL-Yellow%201021.glb')"
+        >
+        <label for="template--17234212389076__main-1-2" title="Yellow (RAL 1021)" class="swatch-input__label">
+          <span class="swatch" style="--swatch--background: #f6b600"></span>
+          <span class="visually-hidden">Yellow (RAL 1021)</span>
+          <span class="visually-hidden label-unavailable">Variant sold out or unavailable</span>
+        </label>
 
-  <span class="visually-hidden">Dark Gray (RAL 7024)</span>
-  
-    <span class="visually-hidden label-unavailable">Variant sold out or unavailable</span>
-</label>
+        <input
+          type="radio"
+          id="template--17234212389076__main-1-3"
+          name="Color"
+          value="Orange (RAL 2009)"
+          color="#de5307"
+          form="product-form-template--17234212389076__main"
+          class="swatch-input__input"
+          onclick="loadModel('https://raw.githubusercontent.com/Arul11111990/newcoder/bdab4a809c55db460c2e9b23844133c8b5b75c00/assets/cart/4-TC-241-6.5DB_fo_RAL-Orange%202009.glb')"
+        >
+        <label for="template--17234212389076__main-1-3" title="Orange (RAL 2009)" class="swatch-input__label">
+          <span class="swatch" style="--swatch--background: #de5307"></span>
+          <span class="visually-hidden">Orange (RAL 2009)</span>
+          <span class="visually-hidden label-unavailable">Variant sold out or unavailable</span>
+        </label>
 
+        <input
+          type="radio"
+          id="template--17234212389076__main-1-4"
+          name="Color"
+          value="Red (RAL 3001)"
+          color="#94121a"
+          form="product-form-template--17234212389076__main"
+          class="swatch-input__input"
+          onclick="loadModel('https://raw.githubusercontent.com/Arul11111990/newcoder/bdab4a809c55db460c2e9b23844133c8b5b75c00/assets/cart/4-TC-241-6.5DB_fo_RAL-Red%203001.glb')"
+        >
+        <label for="template--17234212389076__main-1-4" title="Red (RAL 3001)" class="swatch-input__label">
+          <span class="swatch" style="--swatch--background: #94121a"></span>
+          <span class="visually-hidden">Red (RAL 3001)</span>
+          <span class="visually-hidden label-unavailable">Variant sold out or unavailable</span>
+        </label>
 
+        <input
+          type="radio"
+          id="template--17234212389076__main-1-5"
+          name="Color"
+          value="Blue (RAL 5001)"
+          color="#0f4c64"
+          form="product-form-template--17234212389076__main"
+          class="swatch-input__input"
+          onclick="loadModel('https://raw.githubusercontent.com/Arul11111990/newcoder/bdab4a809c55db460c2e9b23844133c8b5b75c00/assets/cart/4-TC-241-6.5DB_fo_RAL-Blue%205001.glb')"
+        >
+        <label for="template--17234212389076__main-1-5" title="Blue (RAL 5001)" class="swatch-input__label">
+          <span class="swatch" style="--swatch--background: #0f4c64"></span>
+          <span class="visually-hidden">Blue (RAL 5001)</span>
+          <span class="visually-hidden label-unavailable">Variant sold out or unavailable</span>
+        </label>
 
-    
-    
+        <input
+          type="radio"
+          id="template--17234212389076__main-1-6"
+          name="Color"
+          value="Light Blue (RAL 5012)"
+          color="#007cb0"
+          form="product-form-template--17234212389076__main"
+          class="swatch-input__input"
+          onclick="loadModel('https://raw.githubusercontent.com/Arul11111990/newcoder/bdab4a809c55db460c2e9b23844133c8b5b75c00/assets/cart/4-TC-241-6.5DB_fo_RAL-Light%20blue%205012.glb')"
+        >
+        <label for="template--17234212389076__main-1-6" title="Light Blue (RAL 5012)" class="swatch-input__label">
+          <span class="swatch" style="--swatch--background: #007cb0"></span>
+          <span class="visually-hidden">Light Blue (RAL 5012)</span>
+          <span class="visually-hidden label-unavailable">Variant sold out or unavailable</span>
+        </label>
 
-<input
-  type="radio"
-  id="template--17234212389076__main-1-1"
-  name="Color"
-  value="Beige (RAL 1019)"
-  color="#a48f7a"
-  form="product-form-template--17234212389076__main"
-  class="swatch-input__input"
-  
->
-<label
-  for="template--17234212389076__main-1-1"
-  title="Beige (RAL 1019)"
-  class="swatch-input__label"
->
-  
-<span
-  
-    class="swatch "
-    style="--swatch--background: #a48f7a"
-  
-></span>
+        <input
+          type="radio"
+          id="template--17234212389076__main-1-7"
+          name="Color"
+          value="Green (RAL 6024)"
+          color="#008754"
+          form="product-form-template--17234212389076__main"
+          class="swatch-input__input"
+          onclick="loadModel('https://raw.githubusercontent.com/Arul11111990/newcoder/bdab4a809c55db460c2e9b23844133c8b5b75c00/assets/cart/4-TC-241-6.5DB_fo_RAL-Green%206024.glb')"
+        >
+        <label for="template--17234212389076__main-1-7" title="Green (RAL 6024)" class="swatch-input__label">
+          <span class="swatch" style="--swatch--background: #008754"></span>
+          <span class="visually-hidden">Green (RAL 6024)</span>
+          <span class="visually-hidden label-unavailable">Variant sold out or unavailable</span>
+        </label>
 
-  <span class="visually-hidden">Beige (RAL 1019)</span>
-  
-    <span class="visually-hidden label-unavailable">Variant sold out or unavailable</span>
-</label>
+        <input
+          type="radio"
+          id="template--17234212389076__main-1-8"
+          name="Color"
+          value="Gray (RAL 7040)"
+          color="#969992"
+          form="product-form-template--17234212389076__main"
+          class="swatch-input__input"
+          onclick="loadModel('https://raw.githubusercontent.com/Arul11111990/newcoder/bdab4a809c55db460c2e9b23844133c8b5b75c00/assets/cart/4-TC-241-6.5DB_fo_RAL-Grey%207040.glb')"
+        >
+        <label for="template--17234212389076__main-1-8" title="Gray (RAL 7040)" class="swatch-input__label">
+          <span class="swatch" style="--swatch--background: #969992"></span>
+          <span class="visually-hidden">Gray (RAL 7040)</span>
+          <span class="visually-hidden label-unavailable">Variant sold out or unavailable</span>
+        </label>
 
+        <input
+          type="radio"
+          id="template--17234212389076__main-1-9"
+          name="Color"
+          value="White (RAL 9003)"
+          color="#f4f4f4"
+          form="product-form-template--17234212389076__main"
+          class="swatch-input__input"
+          onclick="loadModel('https://raw.githubusercontent.com/Arul11111990/newcoder/bdab4a809c55db460c2e9b23844133c8b5b75c00/assets/cart/4-TC-241-6.5DB_fo_RAL-White%209003.glb')"
+        >
+        <label for="template--17234212389076__main-1-9" title="White (RAL 9003)" class="swatch-input__label">
+          <span class="swatch" style="--swatch--background: #f4f4f4"></span>
+          <span class="visually-hidden">White (RAL 9003)</span>
+          <span class="visually-hidden label-unavailable">Variant sold out or unavailable</span>
+        </label>
 
+        <input
+          type="radio"
+          id="template--17234212389076__main-1-10"
+          name="Color"
+          value="Black (RAL 9005)"
+          color="#0b0b0d"
+          form="product-form-template--17234212389076__main"
+          class="swatch-input__input"
+          onclick="loadModel('https://raw.githubusercontent.com/Arul11111990/newcoder/bdab4a809c55db460c2e9b23844133c8b5b75c00/assets/cart/4-TC-241-6.5DB_fo_RAL-Black%209005.glb')"
+        >
+        <label for="template--17234212389076__main-1-10" title="Black (RAL 9005)" class="swatch-input__label">
+          <span class="swatch" style="--swatch--background: #0b0b0d"></span>
+          <span class="visually-hidden">Black (RAL 9005)</span>
+          <span class="visually-hidden label-unavailable">Variant sold out or unavailable</span>
+        </label>
 
-    
-    
-
-<input
-  type="radio"
-  id="template--17234212389076__main-1-2"
-  name="Color"
-  value="Yellow (RAL 1021)"
-  color="#f6b600"
-  form="product-form-template--17234212389076__main"
-  class="swatch-input__input"
-  
->
-<label
-  for="template--17234212389076__main-1-2"
-  title="Yellow (RAL 1021)"
-  class="swatch-input__label"
->
-  
-<span
-  
-    class="swatch "
-    style="--swatch--background: #f6b600"
-  
-></span>
-
-  <span class="visually-hidden">Yellow (RAL 1021)</span>
-  
-    <span class="visually-hidden label-unavailable">Variant sold out or unavailable</span>
-</label>
-
-
-
-    
-    
-
-<input
-  type="radio"
-  id="template--17234212389076__main-1-3"
-  name="Color"
-  value="Orange (RAL 2009)"
-  color="#de5307"
-  form="product-form-template--17234212389076__main"
-  class="swatch-input__input"
-  
->
-<label
-  for="template--17234212389076__main-1-3"
-  title="Orange (RAL 2009)"
-  class="swatch-input__label"
->
-  
-<span
-  
-    class="swatch "
-    style="--swatch--background: #de5307"
-  
-></span>
-
-  <span class="visually-hidden">Orange (RAL 2009)</span>
-  
-    <span class="visually-hidden label-unavailable">Variant sold out or unavailable</span>
-</label>
-
-
-
-    
-    
-
-<input
-  type="radio"
-  id="template--17234212389076__main-1-4"
-  name="Color"
-  value="Red (RAL 3001)"
-  color="#94121a"
-  form="product-form-template--17234212389076__main"
-  class="swatch-input__input"
-  
->
-<label
-  for="template--17234212389076__main-1-4"
-  title="Red (RAL 3001)"
-  class="swatch-input__label"
->
-  
-<span
-  
-    class="swatch "
-    style="--swatch--background: #94121a"
-  
-></span>
-
-  <span class="visually-hidden">Red (RAL 3001)</span>
-  
-    <span class="visually-hidden label-unavailable">Variant sold out or unavailable</span>
-</label>
-
-
-
-    
-    
-
-<input
-  type="radio"
-  id="template--17234212389076__main-1-5"
-  name="Color"
-  value="Blue (RAL 5001)"
-  color="#0f4c64"
-  form="product-form-template--17234212389076__main"
-  class="swatch-input__input"
-  
->
-<label
-  for="template--17234212389076__main-1-5"
-  title="Blue (RAL 5001)"
-  class="swatch-input__label"
->
-  
-<span
-  
-    class="swatch "
-    style="--swatch--background: #0f4c64"
-  
-></span>
-
-  <span class="visually-hidden">Blue (RAL 5001)</span>
-  
-    <span class="visually-hidden label-unavailable">Variant sold out or unavailable</span>
-</label>
-
-
-
-    
-    
-
-<input
-  type="radio"
-  id="template--17234212389076__main-1-6"
-  name="Color"
-  value="Light Blue (RAL 5012)"
-  color="#007cb0"
-  form="product-form-template--17234212389076__main"
-  class="swatch-input__input"
-  
->
-<label
-  for="template--17234212389076__main-1-6"
-  title="Light Blue (RAL 5012)"
-  class="swatch-input__label"
->
-  
-<span
-  
-    class="swatch "
-    style="--swatch--background: #007cb0"
-  
-></span>
-
-  <span class="visually-hidden">Light Blue (RAL 5012)</span>
-  
-    <span class="visually-hidden label-unavailable">Variant sold out or unavailable</span>
-</label>
-
-
-
-    
-    
-
-<input
-  type="radio"
-  id="template--17234212389076__main-1-7"
-  name="Color"
-  value="Teal (RAL 5021)"
-  color="#007577"
-  form="product-form-template--17234212389076__main"
-  class="swatch-input__input"
-  
->
-<label
-  for="template--17234212389076__main-1-7"
-  title="Teal (RAL 5021)"
-  class="swatch-input__label"
->
-  
-<span
-  
-    class="swatch "
-    style="--swatch--background: #007577"
-  
-></span>
-
-  <span class="visually-hidden">Teal (RAL 5021)</span>
-  
-    <span class="visually-hidden label-unavailable">Variant sold out or unavailable</span>
-</label>
-
-
-
-    
-    
-
-<input
-  type="radio"
-  id="template--17234212389076__main-1-8"
-  name="Color"
-  value="Dusty Gray (RAL 7037)"
-  color="#7a7b7a"
-  form="product-form-template--17234212389076__main"
-  class="swatch-input__input"
-  
->
-<label
-  for="template--17234212389076__main-1-8"
-  title="Dusty Gray (RAL 7037)"
-  class="swatch-input__label"
->
-  
-<span
-  
-    class="swatch "
-    style="--swatch--background: #7a7b7a"
-  
-></span>
-
-  <span class="visually-hidden">Dusty Gray (RAL 7037)</span>
-  
-    <span class="visually-hidden label-unavailable">Variant sold out or unavailable</span>
-</label>
-
-
-
-    
-    
-
-<input
-  type="radio"
-  id="template--17234212389076__main-1-9"
-  name="Color"
-  value="Brown (RAL 8008)"
-  color="#724a25"
-  form="product-form-template--17234212389076__main"
-  class="swatch-input__input"
-  
->
-<label
-  for="template--17234212389076__main-1-9"
-  title="Brown (RAL 8008)"
-  class="swatch-input__label"
->
-  
-<span
-  
-    class="swatch "
-    style="--swatch--background: #724a25"
-  
-></span>
-
-  <span class="visually-hidden">Brown (RAL 8008)</span>
-  
-    <span class="visually-hidden label-unavailable">Variant sold out or unavailable</span>
-</label>
-
-
-
-    
-    
-
-<input
-  type="radio"
-  id="template--17234212389076__main-1-10"
-  name="Color"
-  value="White (RAL 9003)"
-  color="#ececec"
-  form="product-form-template--17234212389076__main"
-  class="swatch-input__input"
-  
->
-<label
-  for="template--17234212389076__main-1-10"
-  title="White (RAL 9003)"
-  class="swatch-input__label"
->
-  
-<span
-  
-    class="swatch "
-    style="--swatch--background: #ececec"
-  
-></span>
-
-  <span class="visually-hidden">White (RAL 9003)</span>
-  
-    <span class="visually-hidden label-unavailable">Variant sold out or unavailable</span>
-</label>
-
-
-
-    
-    
-
-<input
-  type="radio"
-  id="template--17234212389076__main-1-11"
-  name="Color"
-  value="Black (RAL 9005)"
-  color="#232323"
-  form="product-form-template--17234212389076__main"
-  class="swatch-input__input"
-  
->
-<label
-  for="template--17234212389076__main-1-11"
-  title="Black (RAL 9005)"
-  class="swatch-input__label"
->
-  
-<span
-  
-    class="swatch "
-    style="--swatch--background: #232323"
-  
-></span>
-
-  <span class="visually-hidden">Black (RAL 9005)</span>
-  
-    <span class="visually-hidden label-unavailable">Variant sold out or unavailable</span>
-</label>
-
-
-        </fieldset><script type="application/json">
+      </fieldset>
+       <script type="application/json">
       [{"id":44349964222676,"title":"Dark Gray (RAL 7024)","option1":"Dark Gray (RAL 7024)","option2":null,"option3":null,"sku":"4-TC-241-6\/5DB-7024","requires_shipping":true,"taxable":true,"featured_image":{"id":39999119589588,"product_id":8113954390228,"position":1,"created_at":"2024-01-30T12:56:50-05:00","updated_at":"2024-01-30T12:56:52-05:00","alt":null,"width":1267,"height":1000,"src":"\/\/shop.strong-hold.com\/cdn\/shop\/files\/4-TC-240-6.5DB-RAL7024_front-open_dark-gray.jpg?v=1706637412","variant_ids":[44349964222676,44349964255444,44349964288212,44349964320980,44349964353748,44349964386516,44349964419284,44349964452052,44349964484820,44349964517588,44349964550356,44349964583124]},"available":true,"name":"Extreme Duty 12 GA Mobile Tool Cart with 7 GA Steel Top, 6 Half-Width Drawers, 1 Shelf - 48 in. W x 24 in. D x 44 in. H - Dark Gray (RAL 7024)","public_title":"Dark Gray (RAL 7024)","options":["Dark Gray (RAL 7024)"],"price":488900,"weight":268527,"compare_at_price":null,"inventory_management":null,"barcode":"4-TC-241-6\/5DB-7024","featured_media":{"alt":null,"id":32693793226964,"position":1,"preview_image":{"aspect_ratio":1.267,"height":1000,"width":1267,"src":"\/\/shop.strong-hold.com\/cdn\/shop\/files\/4-TC-240-6.5DB-RAL7024_front-open_dark-gray.jpg?v=1706637412"}},"requires_selling_plan":false,"selling_plan_allocations":[],"quantity_rule":{"min":1,"max":null,"increment":1}},{"id":44349964255444,"title":"Beige (RAL 1019)","option1":"Beige (RAL 1019)","option2":null,"option3":null,"sku":"4-TC-241-6\/5DB-1019","requires_shipping":true,"taxable":true,"featured_image":{"id":39999119589588,"product_id":8113954390228,"position":1,"created_at":"2024-01-30T12:56:50-05:00","updated_at":"2024-01-30T12:56:52-05:00","alt":null,"width":1267,"height":1000,"src":"\/\/shop.strong-hold.com\/cdn\/shop\/files\/4-TC-240-6.5DB-RAL7024_front-open_dark-gray.jpg?v=1706637412","variant_ids":[44349964222676,44349964255444,44349964288212,44349964320980,44349964353748,44349964386516,44349964419284,44349964452052,44349964484820,44349964517588,44349964550356,44349964583124]},"available":true,"name":"Extreme Duty 12 GA Mobile Tool Cart with 7 GA Steel Top, 6 Half-Width Drawers, 1 Shelf - 48 in. W x 24 in. D x 44 in. H - Beige (RAL 1019)","public_title":"Beige (RAL 1019)","options":["Beige (RAL 1019)"],"price":498900,"weight":268527,"compare_at_price":null,"inventory_management":null,"barcode":"4-TC-241-6\/5DB-1019","featured_media":{"alt":null,"id":32693793226964,"position":1,"preview_image":{"aspect_ratio":1.267,"height":1000,"width":1267,"src":"\/\/shop.strong-hold.com\/cdn\/shop\/files\/4-TC-240-6.5DB-RAL7024_front-open_dark-gray.jpg?v=1706637412"}},"requires_selling_plan":false,"selling_plan_allocations":[],"quantity_rule":{"min":1,"max":null,"increment":1}},{"id":44349964288212,"title":"Yellow (RAL 1021)","option1":"Yellow (RAL 1021)","option2":null,"option3":null,"sku":"4-TC-241-6\/5DB-1021","requires_shipping":true,"taxable":true,"featured_image":{"id":39999119589588,"product_id":8113954390228,"position":1,"created_at":"2024-01-30T12:56:50-05:00","updated_at":"2024-01-30T12:56:52-05:00","alt":null,"width":1267,"height":1000,"src":"\/\/shop.strong-hold.com\/cdn\/shop\/files\/4-TC-240-6.5DB-RAL7024_front-open_dark-gray.jpg?v=1706637412","variant_ids":[44349964222676,44349964255444,44349964288212,44349964320980,44349964353748,44349964386516,44349964419284,44349964452052,44349964484820,44349964517588,44349964550356,44349964583124]},"available":true,"name":"Extreme Duty 12 GA Mobile Tool Cart with 7 GA Steel Top, 6 Half-Width Drawers, 1 Shelf - 48 in. W x 24 in. D x 44 in. H - Yellow (RAL 1021)","public_title":"Yellow (RAL 1021)","options":["Yellow (RAL 1021)"],"price":498900,"weight":268527,"compare_at_price":null,"inventory_management":null,"barcode":"4-TC-241-6\/5DB-1021","featured_media":{"alt":null,"id":32693793226964,"position":1,"preview_image":{"aspect_ratio":1.267,"height":1000,"width":1267,"src":"\/\/shop.strong-hold.com\/cdn\/shop\/files\/4-TC-240-6.5DB-RAL7024_front-open_dark-gray.jpg?v=1706637412"}},"requires_selling_plan":false,"selling_plan_allocations":[],"quantity_rule":{"min":1,"max":null,"increment":1}},{"id":44349964320980,"title":"Orange (RAL 2009)","option1":"Orange (RAL 2009)","option2":null,"option3":null,"sku":"4-TC-241-6\/5DB-2009","requires_shipping":true,"taxable":true,"featured_image":{"id":39999119589588,"product_id":8113954390228,"position":1,"created_at":"2024-01-30T12:56:50-05:00","updated_at":"2024-01-30T12:56:52-05:00","alt":null,"width":1267,"height":1000,"src":"\/\/shop.strong-hold.com\/cdn\/shop\/files\/4-TC-240-6.5DB-RAL7024_front-open_dark-gray.jpg?v=1706637412","variant_ids":[44349964222676,44349964255444,44349964288212,44349964320980,44349964353748,44349964386516,44349964419284,44349964452052,44349964484820,44349964517588,44349964550356,44349964583124]},"available":true,"name":"Extreme Duty 12 GA Mobile Tool Cart with 7 GA Steel Top, 6 Half-Width Drawers, 1 Shelf - 48 in. W x 24 in. D x 44 in. H - Orange (RAL 2009)","public_title":"Orange (RAL 2009)","options":["Orange (RAL 2009)"],"price":498900,"weight":268527,"compare_at_price":null,"inventory_management":null,"barcode":"4-TC-241-6\/5DB-2009","featured_media":{"alt":null,"id":32693793226964,"position":1,"preview_image":{"aspect_ratio":1.267,"height":1000,"width":1267,"src":"\/\/shop.strong-hold.com\/cdn\/shop\/files\/4-TC-240-6.5DB-RAL7024_front-open_dark-gray.jpg?v=1706637412"}},"requires_selling_plan":false,"selling_plan_allocations":[],"quantity_rule":{"min":1,"max":null,"increment":1}},{"id":44349964353748,"title":"Red (RAL 3001)","option1":"Red (RAL 3001)","option2":null,"option3":null,"sku":"4-TC-241-6\/5DB-3001","requires_shipping":true,"taxable":true,"featured_image":{"id":39999119589588,"product_id":8113954390228,"position":1,"created_at":"2024-01-30T12:56:50-05:00","updated_at":"2024-01-30T12:56:52-05:00","alt":null,"width":1267,"height":1000,"src":"\/\/shop.strong-hold.com\/cdn\/shop\/files\/4-TC-240-6.5DB-RAL7024_front-open_dark-gray.jpg?v=1706637412","variant_ids":[44349964222676,44349964255444,44349964288212,44349964320980,44349964353748,44349964386516,44349964419284,44349964452052,44349964484820,44349964517588,44349964550356,44349964583124]},"available":true,"name":"Extreme Duty 12 GA Mobile Tool Cart with 7 GA Steel Top, 6 Half-Width Drawers, 1 Shelf - 48 in. W x 24 in. D x 44 in. H - Red (RAL 3001)","public_title":"Red (RAL 3001)","options":["Red (RAL 3001)"],"price":498900,"weight":268527,"compare_at_price":null,"inventory_management":null,"barcode":"4-TC-241-6\/5DB-3001","featured_media":{"alt":null,"id":32693793226964,"position":1,"preview_image":{"aspect_ratio":1.267,"height":1000,"width":1267,"src":"\/\/shop.strong-hold.com\/cdn\/shop\/files\/4-TC-240-6.5DB-RAL7024_front-open_dark-gray.jpg?v=1706637412"}},"requires_selling_plan":false,"selling_plan_allocations":[],"quantity_rule":{"min":1,"max":null,"increment":1}},{"id":44349964386516,"title":"Blue (RAL 5001)","option1":"Blue (RAL 5001)","option2":null,"option3":null,"sku":"4-TC-241-6\/5DB-5001","requires_shipping":true,"taxable":true,"featured_image":{"id":39999119589588,"product_id":8113954390228,"position":1,"created_at":"2024-01-30T12:56:50-05:00","updated_at":"2024-01-30T12:56:52-05:00","alt":null,"width":1267,"height":1000,"src":"\/\/shop.strong-hold.com\/cdn\/shop\/files\/4-TC-240-6.5DB-RAL7024_front-open_dark-gray.jpg?v=1706637412","variant_ids":[44349964222676,44349964255444,44349964288212,44349964320980,44349964353748,44349964386516,44349964419284,44349964452052,44349964484820,44349964517588,44349964550356,44349964583124]},"available":true,"name":"Extreme Duty 12 GA Mobile Tool Cart with 7 GA Steel Top, 6 Half-Width Drawers, 1 Shelf - 48 in. W x 24 in. D x 44 in. H - Blue (RAL 5001)","public_title":"Blue (RAL 5001)","options":["Blue (RAL 5001)"],"price":498900,"weight":268527,"compare_at_price":null,"inventory_management":null,"barcode":"4-TC-241-6\/5DB-5001","featured_media":{"alt":null,"id":32693793226964,"position":1,"preview_image":{"aspect_ratio":1.267,"height":1000,"width":1267,"src":"\/\/shop.strong-hold.com\/cdn\/shop\/files\/4-TC-240-6.5DB-RAL7024_front-open_dark-gray.jpg?v=1706637412"}},"requires_selling_plan":false,"selling_plan_allocations":[],"quantity_rule":{"min":1,"max":null,"increment":1}},{"id":44349964419284,"title":"Light Blue (RAL 5012)","option1":"Light Blue (RAL 5012)","option2":null,"option3":null,"sku":"4-TC-241-6\/5DB-5012","requires_shipping":true,"taxable":true,"featured_image":{"id":39999119589588,"product_id":8113954390228,"position":1,"created_at":"2024-01-30T12:56:50-05:00","updated_at":"2024-01-30T12:56:52-05:00","alt":null,"width":1267,"height":1000,"src":"\/\/shop.strong-hold.com\/cdn\/shop\/files\/4-TC-240-6.5DB-RAL7024_front-open_dark-gray.jpg?v=1706637412","variant_ids":[44349964222676,44349964255444,44349964288212,44349964320980,44349964353748,44349964386516,44349964419284,44349964452052,44349964484820,44349964517588,44349964550356,44349964583124]},"available":true,"name":"Extreme Duty 12 GA Mobile Tool Cart with 7 GA Steel Top, 6 Half-Width Drawers, 1 Shelf - 48 in. W x 24 in. D x 44 in. H - Light Blue (RAL 5012)","public_title":"Light Blue (RAL 5012)","options":["Light Blue (RAL 5012)"],"price":498900,"weight":268527,"compare_at_price":null,"inventory_management":null,"barcode":"4-TC-241-6\/5DB-5012","featured_media":{"alt":null,"id":32693793226964,"position":1,"preview_image":{"aspect_ratio":1.267,"height":1000,"width":1267,"src":"\/\/shop.strong-hold.com\/cdn\/shop\/files\/4-TC-240-6.5DB-RAL7024_front-open_dark-gray.jpg?v=1706637412"}},"requires_selling_plan":false,"selling_plan_allocations":[],"quantity_rule":{"min":1,"max":null,"increment":1}},{"id":44349964452052,"title":"Teal (RAL 5021)","option1":"Teal (RAL 5021)","option2":null,"option3":null,"sku":"4-TC-241-6\/5DB-5021","requires_shipping":true,"taxable":true,"featured_image":{"id":39999119589588,"product_id":8113954390228,"position":1,"created_at":"2024-01-30T12:56:50-05:00","updated_at":"2024-01-30T12:56:52-05:00","alt":null,"width":1267,"height":1000,"src":"\/\/shop.strong-hold.com\/cdn\/shop\/files\/4-TC-240-6.5DB-RAL7024_front-open_dark-gray.jpg?v=1706637412","variant_ids":[44349964222676,44349964255444,44349964288212,44349964320980,44349964353748,44349964386516,44349964419284,44349964452052,44349964484820,44349964517588,44349964550356,44349964583124]},"available":true,"name":"Extreme Duty 12 GA Mobile Tool Cart with 7 GA Steel Top, 6 Half-Width Drawers, 1 Shelf - 48 in. W x 24 in. D x 44 in. H - Teal (RAL 5021)","public_title":"Teal (RAL 5021)","options":["Teal (RAL 5021)"],"price":498900,"weight":268527,"compare_at_price":null,"inventory_management":null,"barcode":"4-TC-241-6\/5DB-5021","featured_media":{"alt":null,"id":32693793226964,"position":1,"preview_image":{"aspect_ratio":1.267,"height":1000,"width":1267,"src":"\/\/shop.strong-hold.com\/cdn\/shop\/files\/4-TC-240-6.5DB-RAL7024_front-open_dark-gray.jpg?v=1706637412"}},"requires_selling_plan":false,"selling_plan_allocations":[],"quantity_rule":{"min":1,"max":null,"increment":1}},{"id":44349964484820,"title":"Dusty Gray (RAL 7037)","option1":"Dusty Gray (RAL 7037)","option2":null,"option3":null,"sku":"4-TC-241-6\/5DB-7037","requires_shipping":true,"taxable":true,"featured_image":{"id":39999119589588,"product_id":8113954390228,"position":1,"created_at":"2024-01-30T12:56:50-05:00","updated_at":"2024-01-30T12:56:52-05:00","alt":null,"width":1267,"height":1000,"src":"\/\/shop.strong-hold.com\/cdn\/shop\/files\/4-TC-240-6.5DB-RAL7024_front-open_dark-gray.jpg?v=1706637412","variant_ids":[44349964222676,44349964255444,44349964288212,44349964320980,44349964353748,44349964386516,44349964419284,44349964452052,44349964484820,44349964517588,44349964550356,44349964583124]},"available":true,"name":"Extreme Duty 12 GA Mobile Tool Cart with 7 GA Steel Top, 6 Half-Width Drawers, 1 Shelf - 48 in. W x 24 in. D x 44 in. H - Dusty Gray (RAL 7037)","public_title":"Dusty Gray (RAL 7037)","options":["Dusty Gray (RAL 7037)"],"price":498900,"weight":268527,"compare_at_price":null,"inventory_management":null,"barcode":"4-TC-241-6\/5DB-7037","featured_media":{"alt":null,"id":32693793226964,"position":1,"preview_image":{"aspect_ratio":1.267,"height":1000,"width":1267,"src":"\/\/shop.strong-hold.com\/cdn\/shop\/files\/4-TC-240-6.5DB-RAL7024_front-open_dark-gray.jpg?v=1706637412"}},"requires_selling_plan":false,"selling_plan_allocations":[],"quantity_rule":{"min":1,"max":null,"increment":1}},{"id":44349964517588,"title":"Brown (RAL 8008)","option1":"Brown (RAL 8008)","option2":null,"option3":null,"sku":"4-TC-241-6\/5DB-8008","requires_shipping":true,"taxable":true,"featured_image":{"id":39999119589588,"product_id":8113954390228,"position":1,"created_at":"2024-01-30T12:56:50-05:00","updated_at":"2024-01-30T12:56:52-05:00","alt":null,"width":1267,"height":1000,"src":"\/\/shop.strong-hold.com\/cdn\/shop\/files\/4-TC-240-6.5DB-RAL7024_front-open_dark-gray.jpg?v=1706637412","variant_ids":[44349964222676,44349964255444,44349964288212,44349964320980,44349964353748,44349964386516,44349964419284,44349964452052,44349964484820,44349964517588,44349964550356,44349964583124]},"available":true,"name":"Extreme Duty 12 GA Mobile Tool Cart with 7 GA Steel Top, 6 Half-Width Drawers, 1 Shelf - 48 in. W x 24 in. D x 44 in. H - Brown (RAL 8008)","public_title":"Brown (RAL 8008)","options":["Brown (RAL 8008)"],"price":498900,"weight":268527,"compare_at_price":null,"inventory_management":null,"barcode":"4-TC-241-6\/5DB-8008","featured_media":{"alt":null,"id":32693793226964,"position":1,"preview_image":{"aspect_ratio":1.267,"height":1000,"width":1267,"src":"\/\/shop.strong-hold.com\/cdn\/shop\/files\/4-TC-240-6.5DB-RAL7024_front-open_dark-gray.jpg?v=1706637412"}},"requires_selling_plan":false,"selling_plan_allocations":[],"quantity_rule":{"min":1,"max":null,"increment":1}},{"id":44349964550356,"title":"White (RAL 9003)","option1":"White (RAL 9003)","option2":null,"option3":null,"sku":"4-TC-241-6\/5DB-9003","requires_shipping":true,"taxable":true,"featured_image":{"id":39999119589588,"product_id":8113954390228,"position":1,"created_at":"2024-01-30T12:56:50-05:00","updated_at":"2024-01-30T12:56:52-05:00","alt":null,"width":1267,"height":1000,"src":"\/\/shop.strong-hold.com\/cdn\/shop\/files\/4-TC-240-6.5DB-RAL7024_front-open_dark-gray.jpg?v=1706637412","variant_ids":[44349964222676,44349964255444,44349964288212,44349964320980,44349964353748,44349964386516,44349964419284,44349964452052,44349964484820,44349964517588,44349964550356,44349964583124]},"available":true,"name":"Extreme Duty 12 GA Mobile Tool Cart with 7 GA Steel Top, 6 Half-Width Drawers, 1 Shelf - 48 in. W x 24 in. D x 44 in. H - White (RAL 9003)","public_title":"White (RAL 9003)","options":["White (RAL 9003)"],"price":498900,"weight":268527,"compare_at_price":null,"inventory_management":null,"barcode":"4-TC-241-6\/5DB-9003","featured_media":{"alt":null,"id":32693793226964,"position":1,"preview_image":{"aspect_ratio":1.267,"height":1000,"width":1267,"src":"\/\/shop.strong-hold.com\/cdn\/shop\/files\/4-TC-240-6.5DB-RAL7024_front-open_dark-gray.jpg?v=1706637412"}},"requires_selling_plan":false,"selling_plan_allocations":[],"quantity_rule":{"min":1,"max":null,"increment":1}},{"id":44349964583124,"title":"Black (RAL 9005)","option1":"Black (RAL 9005)","option2":null,"option3":null,"sku":"4-TC-241-6\/5DB-9005","requires_shipping":true,"taxable":true,"featured_image":{"id":39999119589588,"product_id":8113954390228,"position":1,"created_at":"2024-01-30T12:56:50-05:00","updated_at":"2024-01-30T12:56:52-05:00","alt":null,"width":1267,"height":1000,"src":"\/\/shop.strong-hold.com\/cdn\/shop\/files\/4-TC-240-6.5DB-RAL7024_front-open_dark-gray.jpg?v=1706637412","variant_ids":[44349964222676,44349964255444,44349964288212,44349964320980,44349964353748,44349964386516,44349964419284,44349964452052,44349964484820,44349964517588,44349964550356,44349964583124]},"available":true,"name":"Extreme Duty 12 GA Mobile Tool Cart with 7 GA Steel Top, 6 Half-Width Drawers, 1 Shelf - 48 in. W x 24 in. D x 44 in. H - Black (RAL 9005)","public_title":"Black (RAL 9005)","options":["Black (RAL 9005)"],"price":498900,"weight":268527,"compare_at_price":null,"inventory_management":null,"barcode":"4-TC-241-6\/5DB-9005","featured_media":{"alt":null,"id":32693793226964,"position":1,"preview_image":{"aspect_ratio":1.267,"height":1000,"width":1267,"src":"\/\/shop.strong-hold.com\/cdn\/shop\/files\/4-TC-240-6.5DB-RAL7024_front-open_dark-gray.jpg?v=1706637412"}},"requires_selling_plan":false,"selling_plan_allocations":[],"quantity_rule":{"min":1,"max":null,"increment":1}}]
-    </script>
-  </variant-selects><noscript class="product-form__noscript-wrapper-template--17234212389076__main">
+    </script> 
+  </variant-selects>
+  <script>
+    function loadModel(url) {
+      const modelViewer = document.getElementById('model-viewer');
+      modelViewer.src = url;
+    }
+  </script>
+
+<noscript class="product-form__noscript-wrapper-template--17234212389076__main">
   <div class="product-form__input">
     <label class="form__label" for="Variants-template--17234212389076__main">Product variants</label>
     <div class="select">
